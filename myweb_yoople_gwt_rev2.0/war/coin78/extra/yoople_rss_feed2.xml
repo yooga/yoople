@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+   <title>Welcome to Yoople!</title>
+   <link>http://yongxin1935.appspot.com</link>
+   <description>This is a website created by Yongxin Luo</description>
+   
+   <item>
+     <title>Eclipse IDE for Javascript Developers </title>
+     <link>http://eclipse.org/downloads/packages/eclipse-ide-javascript-web-developers/heliosr</link>
+     <pubDate>Tue, 27 July 2010 20:23:41 GMT</pubDate>
+     <description><![CDATA[
+     <p>Tools for JavaScript developers creating Web applications, including a JavaScript IDE, tools for JavaScript, HTML, CSS, and XML.</p>
+     ]]>
+     </description>
+   </item>
+   
+   <item>
+     <title>MooTools - a compact javascript framework</title>
+     <link>http://mootools.net/</link>
+     <pubDate>Tue, 27 July 2010 20:25:40 GMT</pubDate>
+     <description><![CDATA[
+     <p>MooTools is a compact, modular, Object-Oriented JavaScript framework designed for the intermediate to advanced JavaScript developer. It allows you to write powerful, flexible, and cross-browser code with its elegant, well documented, and coherent API.</p>
+     ]]>
+     </description>
+   </item>
+   
+   <item>
+     <title>YUI Library</title>
+     <link>http://developer.yahoo.com/yui/</link>
+     <pubDate>Tue, 27 July 2010 20:27:41 GMT</pubDate>
+     <description><![CDATA[
+     <p>The YUI Library is a set of utilities and controls, written with JavaScript and CSS, for building richly interactive web applications using techniques such as DOM scripting, DHTML and AJAX. YUI is available under a BSD license and is free for all uses.</p>
+     ]]>
+     </description>
+   </item>
+   
+   <item>
+     <title>Jquery - The Write Less, Do More, Javascript Library</title>
+     <link>http://jquery.com/</link>
+     <pubDate>Tue, 27 July 2010 20:29:41 GMT</pubDate>
+     <description><![CDATA[
+     <p>jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. jQuery is designed to change the way that you write JavaScript.</p>
+     ]]>
+     </description>
+   </item>
+   
+   <item>
+     <title>Dojo - Unbeatable JavaScript Tools</title>
+     <link>http://dojotoolkit.org/</link>
+     <pubDate>Sat, 10 July 2010 16:23:41 GMT</pubDate>
+     <description><![CDATA[
+     <p>Dojo saves you time, delivers powerful performance, and scales with your development process. It’s the toolkit experienced developers turn to for building great web experiences.</p>
+      ]]>
+     </description>
+   </item>
+    
+    
+</channel>
+</rss>

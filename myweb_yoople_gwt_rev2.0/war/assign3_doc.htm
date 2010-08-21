@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Assignment 3 Documentation</title>
+</head>
+<body>
+
+<p>
+1. I have to remove the attributes method="" and action="" from the form element in order to prevent the browser 
+from sending data to the server and leading to a page reload. From the reference book I read, it should not be an 
+issue as long as I include a return false at the end of submitAndClear(). Also the page is not reloaded when I test
+the codes in my local server, but it is not the case after it is uploaded. Is there something I am missing?
+</p>
+
+<p>
+2. I have a problem of using onblur to validate each input field of the form and set the focus back if invalidated. 
+In EE, as you pointed out in the discussion forum, if there are more than one input elements with onblur having such 
+validate() handlers, the two elements will fire its onblur handlers as the focus is relocating between them, resulting 
+in an *infinite* back&forth alert() messaging which could hang IE. I got this issue a few times when I test my codes in 
+EE. I also tried to use onchange to validate each field. However, the event does not always fire. Instead I am using the
+background color to highlight the input field if it is not validated, as you suggested in the discussion forum. If the
+field is validated, the background color will change back to the default value.
+</p>
+
+<P>
+3. I added two interactivities to the page using the cross-browser event handlers and the cross-browser objects to the page. One is 
+use the mouseover event to check the coordinates and another is use the HTML load event handler to load the image to the page.
+</P>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+@CHARSET "ISO-8859-1";
+
+mystocks { 
+	
+	  diplay:block;
+	  width:950px;
+	  padding:6px;
+	  margin-left:30px;
+	  font-size: 16pt;
+	  font-weight: bold;
+	  color: blue;
+	  text-align: center; 
+	  background-color: #FFFFFC;
+}
+            
+stock
+{
+	  display: block;
+      width:850px;
+      padding: 2px;
+      text-align: left;
+      color: blue;
+      background-color: #FFFF99;	
+}
+
+Summary, Headline, Company_events, profile, Key_statistics
+{
+      font-size: 12pt;
+      color: black;
+} 
+

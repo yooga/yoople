@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+   <title>Welcome to Yoople!</title>
+   <link>http://yongxin1935.appspot.com</link>
+   <description>This is a website created by Yongxin Luo</description>
+
+   <item>
+     <title>My Monthly Stock Picks</title>
+     <link>http://yongxin1935.appspot.com/coin78/week6/mystocks_xsl.xml</link>
+     <pubDate>Sat, 06 July 2010 16:23:41 GMT</pubDate>
+     <description>
+     <![CDATA[
+     <p>Check out my favorite stocks.</p>
+     ]]>
+     </description>
+   </item>
+   
+   <item>
+     <title>Headlines for Google Inc.</title>
+     <link>http://www.fool.com/investing/general/2010/08/06/5-other-stocks-to-consider-before-buying-apple.aspx</link>
+     <pubDate>Sat, 07 August 2010 19:55:00 GMT</pubDate>
+     <description>
+     <![CDATA[
+     <p>Too many investors get excited and jump into a stock without comparing and contrasting against other possibilities. This is true for great stocks, and it's true for terrible stocks. What I'm about to do is play devil's advocate. Again.</p>
+     ]]>
+     </description>
+   </item>
+   
+   <item>
+     <title>Headlines for JDS Uniphase Corporation</title>
+     <link>
+     <![CDATA[
+     http://www.minyanville.com/businessmarkets/articles/pirates-somalia-sugar-commodities-sugar-futures/8/6/2010/id/29504?camp=syndication&medium=portals&from=yahoo
+     ]]>
+     </link>
+     <pubDate>Sat, 07 August 2010 19:57:40 GMT</pubDate>
+     <description>
+     <![CDATA[
+     <p>The Syrian-crewed MV Syria Star, flagged in Saint Vincent and Grenadines and transporting an estimated 23,755 cubic meters of sugar, was seized by Somali pirates in the Gulf of Aden yesterday.</p>
+     ]]>
+     </description>
+   </item>
+   
+   <item>
+     <title>Headlines for Wells Fargo &amp; Company</title>
+     <link>http://finance.yahoo.com/q/h?s=wfc</link>
+     <pubDate>Sat, 07 August 2010 19:58:00 GMT</pubDate>
+     <description>
+     <![CDATA[
+     <p>Check the latest headlines from Wells Fargo.</p>
+     ]]>
+     </description>
+   </item>
+   
+   <item>
+     <title>Headlines for Exxon Mobile Corporation</title>
+     <link>http://finance.yahoo.com/q/h?s=xom</link>
+     <pubDate>Sat, 07 August 2010 19:59:00 GMT</pubDate>
+     <description>
+     <![CDATA[
+     <p>Check the latest headlines from Exxon Mobile Corporation.</p>
+     ]]>
+     </description>
+   </item>
+    
+   <item>
+     <title>Headlines for 3M Company</title>
+     <link>http://finance.yahoo.com/q?s=MMM</link>
+     <pubDate>Sat, 07 August 2010 19:59:45 GMT</pubDate>
+     <description>
+     <![CDATA[
+     <p>Check the latest headlines from 3M Company.</p>
+     ]]>
+     </description>
+   </item>
+    
+</channel>
+</rss>

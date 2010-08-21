@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<h2 style="background-color: #66FF66">Yongxin Luo, COIN70B, Assignment 4</h2>   
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Yoople_COIN70B_Assignment 4</title>
+<script type="text/javascript", src="js/Student.js"></script>
+<script type="text/javascript", src="js/xmlparser.js"></script>
+<script type="text/javascript">
+Student.prototype.toXMLDOM = function(i) {
+
+	//student element 
+	var student = xmldom.createElement('student');  
+	student.setAttribute('firstname', this.firstname);
+	student.setAttribute('lastname', this.lastname);
+	xmldom.documentElement.appendChild(student);
+
+    //1st child of the student element
+    var email =xmldom.createElement('email');
+    var textNode = xmldom.createTextNode(this.email);
+    email.appendChild(textNode);
+    xmldom.documentElement.childNodes[i].appendChild(email);
+      
+    //2nd child element of the student element
+    var assign1 = xmldom.createElement('task');
+    assign1.setAttribute('name', 'Assignment 1');
+    assign1.setAttribute('points',this.assignments[0].points);
+    xmldom.documentElement.childNodes[i].appendChild(assign1);
+ 
+    //3rd child of the student element
+    var assign2 = xmldom.createElement('task');
+    assign2.setAttribute('name', 'Assignment 2');
+    assign2.setAttribute('points',this.assignments[1].points);
+    xmldom.documentElement.childNodes[i].appendChild(assign2);
+
+    //4th child of the student element
+    var assign3 = xmldom.createElement('task');
+    assign3.setAttribute('name', 'Assignment 3');
+    assign3.setAttribute('points',this.assignments[2].points);
+    xmldom.documentElement.childNodes[i].appendChild(assign3);
+
+    //5th child of the student element
+    var assign4 = xmldom.createElement('task');
+    assign4.setAttribute('name', 'Assignment 4');
+    assign4.setAttribute('points',this.assignments[3].points);
+    xmldom.documentElement.childNodes[i].appendChild(assign4);
+
+    //6th child of the student element
+    var assign5 = xmldom.createElement('task');
+    assign5.setAttribute('name', 'Assignment 5');
+    assign5.setAttribute('points',this.assignments[4].points);
+    xmldom.documentElement.childNodes[i].appendChild(assign5);
+
+    //7th child of the student element
+    var midterm = xmldom.createElement('task');
+    midterm.setAttribute('name', 'Midterm');
+    midterm.setAttribute('points',this.exams[0].points);
+    xmldom.documentElement.childNodes[i].appendChild(midterm);
+
+    //8th element of the student element
+    var finalterm = xmldom.createElement('task');
+    finalterm.setAttribute('name', 'Finalterm');
+    finalterm.setAttribute('points',this.exams[1].points);
+    xmldom.documentElement.childNodes[i].appendChild(finalterm);
+
+    //9th child of the student element
+    var grade = xmldom.createElement('grade');
+    var anotherTextNode = xmldom.createTextNode(this.letterGrade);
+    grade.appendChild(anotherTextNode);
+    xmldom.documentElement.childNodes[i].appendChild(grade);
+}
+
+function createStudentXML() {
+
+	//root element
+    xmldom = parseXml('<course id="COIN70B" quarter="Summer 2010"></course>');
+    
+    //create 2 instances
+    var student1 = new Student("Yongxin", "Luo", "yongxin91@yahoo.com");
+    var student2 = new Student("Brad","Patterson", "bradpt@gmail.com");
+    
+    student1.addAssignment(new Task("assignment 1", 28));
+    student1.addAssignment(new Task("assignment 2", 29));
+    student1.addAssignment(new Task("assignment 3", 28));
+    student1.addAssignment(new Task("assignment 4", 28));
+    student1.addAssignment(new Task("assignment 5", 28));
+    student1.addExam(new Task("Midterm", 45));
+    student1.addExam(new Task("Final", 48));
+    student1.calcGrade();
+    
+    student2.addAssignment(new Task("assignment 1", 20));
+    student2.addAssignment(new Task("assignment 2", 20));
+    student2.addAssignment(new Task("assignment 3", 20));
+    student2.addAssignment(new Task("assignment 4", 20));
+    student2.addAssignment(new Task("assignment 5", 20));
+    student2.addExam(new Task("Midterm", 40));
+    student2.addExam(new Task("Final", 30));
+    student2.calcGrade();
+
+    student1.toXMLDOM(0);
+    student2.toXMLDOM(1);
+
+    document.getElementById('textarea').value = serializeXml(xmldom);
+    
+    var div = document.getElementById('mydiv');
+    div.innerHTML = extractData(xmldom).replace(/\n/g,"<br>");
+}
+
+function createErrorXML() {
+
+   try {
+	  //root element
+      xmldom = parseXml('<course id="COIN70B" quarter="Summer 2010"><course>');
+   } catch(ex) {
+      alert(ex.message);
+   }
+}
+
+function extractData(xmldom) {
+
+	var dataoutput="";
+	
+    for(var i=0; i<xmldom.getElementsByTagName('student').length; i++)
+    {
+    	dataoutput += "Student: " + xmldom.documentElement.childNodes[i].getAttribute('firstname') + 
+    	              " " + xmldom.documentElement.childNodes[i].getAttribute('lastname') + "\n";
+    	dataoutput += "Email: " + xmldom.documentElement.childNodes[i].childNodes[0].childNodes[0].nodeValue + "\n";
+    	dataoutput += "Assignment1: " + xmldom.documentElement.childNodes[i].childNodes[1].getAttribute('points') + "\n";
+    	dataoutput += "Assignment2: " + xmldom.documentElement.childNodes[i].childNodes[2].getAttribute('points') + "\n";
+    	dataoutput += "Assignment3: " + xmldom.documentElement.childNodes[i].childNodes[3].getAttribute('points') + "\n";
+    	dataoutput += "Assignment4: " + xmldom.documentElement.childNodes[i].childNodes[4].getAttribute('points') + "\n";
+    	dataoutput += "Assignment5: " + xmldom.documentElement.childNodes[i].childNodes[5].getAttribute('points') + "\n";
+    	dataoutput += "Midterm: " + xmldom.documentElement.childNodes[i].childNodes[6].getAttribute('points') + "\n";
+    	dataoutput += "Final: " + xmldom.documentElement.childNodes[i].childNodes[7].getAttribute('points') + "\n";
+    	dataoutput += "Final Grade: " + xmldom.documentElement.childNodes[i].childNodes[8].childNodes[0].nodeValue + "\n";
+    	dataoutput += "\n";
+    }
+
+    return dataoutput;
+}
+
+</script>
+</head>
+<body>
+<input id="createxml" type='button' value='Create XML' onclick="javascript:createStudentXML()" /><br></br>
+<input id="createxmlerror" type='button' value='Creatte XML with Error' onclick="javascript:createErrorXML()" /><br></br>
+<textarea id="textarea" rows="20", cols="50"></textarea><br></br>
+<div id="mydiv" style="background-color:#FFFFCD;height:500px;width:410px;padding:10px"></div>
+</body>
+</html>

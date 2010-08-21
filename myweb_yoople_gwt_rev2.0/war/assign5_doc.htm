@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Assignment 5 Documentation</title>
+</head>
+<body>
+
+<P>
+1.For Part I I first tried creating one XHR object and reusing it to call both twitter and google servers
+one by one to extract and display the content on my page at the same time. It works well in EE, but it does
+not in FF. In FF, only the results of the last call was displayed on my page. I get around this issue by creating
+two XHR object, one is used to extract the response from the googel and another is used to extract the results from
+the Twitter. It works well in both IE and FF.
+</P><br>
+
+<P>
+2. For Part II, I improved my Student reference type constructor by making it scope-safe. I also used the lazy-loading 
+technique and optimized the createXHR() function.
+</P>
+</body>
+</html>

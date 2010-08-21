@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Assignment 1 Documentation</title>
+</head>
+<body>
+
+<p>1. I am using Eclipse IDE for Java EE Developers to write and debug JavaScript. It works, but it does not support some of key features I really need such as Syntax Highlighting 
+, Full outlining showing Classes, Functions and Fields Highlight, and check of matching bracket / parenthesis, etc. Sometimes I have hard time debugging the codes. I need to add 
+the plugin of JSDT into my current IDE or install the Eclipse IDE for JavaScript Developers. Either way should make my life a little easier.</p><br>
+
+<textarea rows="30" cols="60">
+2. I used the string pattern-match method to replace space and newline so that the triangle can be displayed properly in the HTML content.
+
+First, I tried the following codes. It did not work and the browser had a silent return. 
+
+var charTriangle_string = output.replace(/ /g, "&nbsp");
+charTriangle_string=charTriangle_string.replace(/\n/g,"<br>");
+return charTriangle_string;
+     
+Then I modified the codes as follows. It works and the triangle is properly displayed in the HTML context.
+     
+var charTriangle_string = output.replace(/ /g, "&nbsp").replace(/\n/g,"<br>");
+return charTriangle_string;
+
+It seems to me that both should work, but in reality the first one did not. Has somebody figured out why? 
+</textarea>
+
+</body>
+</html>
