@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<h2 style="background-color: #66FF66">
+Yongxin Luo, COIN70B, Assignment 2
+</h2>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Yoople_COIN70B_Assignment2</title>
+<script type="text/javascript", src="js/Student.js"></script>
+<script type="text/javascript", src="js/ua_detect.js"></script>
+<script type="text/javascript">
+
+   function init() { displayClientInfo(); }
+
+   function displayClientInfo() {
+
+	  var ClientInfo = "";
+
+	  var prop
+		 for( prop in client.engine ) {
+		    if( client.engine[prop] ) {
+		       ClientInfo += "Rendering Engine: " + prop + ", version " + client.engine.ver +"\n";
+		       break; 
+		    }
+	     }
+
+      var prop1;
+	  for( prop1 in client.browser ) {
+	     if( client.browser[prop1] ) {
+		    ClientInfo += "Browser: " + prop1 + ", version " + client.browser.ver + "\n";
+		    break; 
+		 }
+      }
+
+      var prop2;
+	  for( prop2 in client.system ) {
+	     if( client.system[prop2] ) {
+		    ClientInfo += "System: " + prop2 + " " + client.system[prop2] + "\n";
+		    break;
+		 }
+      }
+
+	  if(hasFlash()){
+        ClientInfo += "Plugin: Flash " + "\n";
+	  }
+
+	  if(hasQuickTime()) {
+        ClientInfo += "Plugin: QuickTime" + "\n";
+	  }
+
+      outputToElement('init_area',ClientInfo.replace(/\n/g,"<br>"));
+   }
+
+   function popupWindow(url, width, height) {
+
+	   var the_features = "height=" + height + ",width=" + width + ",resizable=yes,scrollbars=yes";
+	   var the_window = window.open(url, "", the_features);
+
+   }
+
+   function outputToElement(id, content) {
+
+	   if(document.getElementById(id)){
+	      document.getElementById(id).innerHTML=content;
+	   }
+   }
+
+   function fillStudentsInfo() {
+
+	  var output = "";
+
+	  while(confirm("Whether to start a new student?")){
+
+         var firstname = prompt("Enter your first name? ","");
+    	 var lastname = prompt("Enter your last name? ","");
+    	 var email = prompt("Enter your email? ","");
+
+    	 var student = new Student(firstname,lastname,email);
+    	 
+    	 for(var i=0; i<5; i++) {
+        	 var assign_points = prompt("Enter the points of your assingment [1..5]: ");
+        	 student.addAssignment(new Task("assignment", parseFloat(assign_points)));
+    	 }
+    	 
+         var midterm_points = prompt("Enter the points of your midterm? ", "");
+         var final_points = prompt("Enter the points of your final? ","");
+
+         student.addExam(new Task("Midterm", parseFloat(midterm_points)));
+         student.addExam(new Task("Final", parseFloat(final_points)));
+         student.calcGrade();
+
+         output += student.toHTML() + "<br>";
+      }
+          
+       //outputToElement('student_area',student.toString().replace(/\n/g,"<br>"))
+       outputToElement('student_area', output);
+   }
+
+</script>
+</head>
+<body onload="init()">
+
+   <p>
+   <div id="init_area" style="background-color: #FFFF66">
+   <script>displayClientInfo</script>
+   </div>
+   <p>
+   
+   <p><a href="assign2_doc.htm">Documentation</a></P>
+   
+   <p>
+   <a href="javascript: void(0)" onclick="popupWindow('http://en.wikipedia.org/wiki/Comparison_of_Web_Browsers',600,600)">popupWindow</a>
+   </p>
+   
+   <a href="javascript: vold(0)" onclick="fillStudentsInfo()">fillStudentInfo</a>
+   <p id="student_area" style="font-family: Courier New, monospace"></p>
+   
+</body>
+</html>

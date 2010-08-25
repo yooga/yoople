@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="mystocks">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="stock" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="stock">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="summary"/>
+        <xsd:element ref="company_headlines"/>
+        <xsd:element ref="company_events"/>
+        <xsd:element ref="profile"/>
+        <xsd:element ref="key_statistics"/>
+      </xsd:sequence>
+      <xsd:attribute name="id" type="xsd:string" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="summary">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="symbol"/>
+        <xsd:element ref="last_trade"/>
+        <xsd:element ref="trade_time"/>
+        <xsd:element ref="previous_close"/>
+        <xsd:element ref="volume"/>
+        <xsd:element ref="day_range"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="symbol" type="xsd:string"/>
+  <xsd:element name="last_trade" type="xsd:string"/>
+  <xsd:element name="trade_time" type="xsd:string"/>
+  <xsd:element name="previous_close" type="xsd:string"/>
+  <xsd:element name="volume" type="xsd:string"/>
+  <xsd:element name="day_range" type="xsd:string"/>
+  <xsd:element name="company_headlines">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="company_headline" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="company_headline">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="date"/>
+        <xsd:element ref="headline"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="date" type="xsd:string"/>
+  <xsd:element name="headline" type="xsd:string"/>
+  <xsd:element name="company_events">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="company_event" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="company_event">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="date"/>
+        <xsd:element ref="event"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="event" type="xsd:string"/>
+  <xsd:element name="profile">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="company_name"/>
+        <xsd:element ref="address"/>
+        <xsd:element ref="phone"/>
+        <xsd:element ref="fax"/>
+        <xsd:element ref="website"/>
+        <xsd:element ref="sector"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="company_name" type="xsd:string"/>
+  <xsd:element name="address" type="xsd:string"/>
+  <xsd:element name="phone" type="xsd:string"/>
+  <xsd:element name="fax" type="xsd:string"/>
+  <xsd:element name="website" type="xsd:string"/>
+  <xsd:element name="sector" type="xsd:string"/>
+  <xsd:element name="key_statistics">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="market_cap"/>
+        <xsd:element ref="profit_margin"/>
+        <xsd:element ref="revenue"/>
+        <xsd:element ref="total_cash"/>
+        <xsd:element ref="total_debt"/>
+        <xsd:element ref="shares_outstanding"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="market_cap" type="xsd:string"/>
+  <xsd:element name="profit_margin" type="xsd:string"/>
+  <xsd:element name="revenue" type="xsd:string"/>
+  <xsd:element name="total_cash" type="xsd:string"/>
+  <xsd:element name="total_debt" type="xsd:string"/>
+  <xsd:element name="shares_outstanding" type="xsd:string"/>
+</xsd:schema>
+

@@ -1,0 +1,39 @@
+<!ELEMENT mystocks (stock+)>
+<!ELEMENT stock (summary, company_headlines, company_events, profile, key_statistics)>
+<!ATTLIST stock
+          id CDATA #REQUIRED>
+<!ELEMENT summary EMPTY>
+<!ATTLIST summary
+          symbol CDATA #REQUIRED
+          last_trade CDATA #REQUIRED
+          trade_time CDATA #REQUIRED
+          previous_close CDATA #REQUIRED
+          volume CDATA #REQUIRED
+          day_range CDATA #REQUIRED>
+<!ELEMENT company_headlines (company_headline+)>
+<!ELEMENT company_headline EMPTY>
+<!ATTLIST company_headline
+          date CDATA #REQUIRED
+          headline CDATA #REQUIRED>
+<!ELEMENT company_events (company_event+)>
+<!ELEMENT company_event EMPTY>
+<!ATTLIST company_event
+          date CDATA #REQUIRED
+          event CDATA #REQUIRED>
+<!ELEMENT profile EMPTY>
+<!ATTLIST profile
+          company_name CDATA #REQUIRED
+          address CDATA #REQUIRED
+          phone CDATA #REQUIRED
+          fax CDATA #REQUIRED
+          website CDATA #REQUIRED
+          sector CDATA #REQUIRED>
+<!ELEMENT key_statistics EMPTY>
+<!ATTLIST key_statistics
+          market_cap CDATA #REQUIRED
+          profit_margin CDATA #REQUIRED
+          revenue CDATA #IMPLIED
+          total_cash CDATA #REQUIRED
+          total_debt CDATA #REQUIRED
+          shares_outstanding CDATA #REQUIRED>
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<h2 style="background-color: #66FF66">
+Yongxin Luo, COIN70B, Assignment 1
+</h2>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+    <title>Yoople_COIN70B_Assignment1</title>
+    <script type="text/javascript", src="js/Student.js"></script>
+</head>
+<body>
+
+     <script type="text/javascript">
+
+        function createStudent() {
+            
+        //create 2 instances
+        var student1 = new Student("Yongxin", "Luo", "yongxin91@yahoo.com");
+        var student2 = new Student("Brad","Pitt", "bradpitt@gmail.com");
+
+        
+        //assign tasks to instance 1
+        var task1 = new Task("assignment 1", 28);
+        var task2 = new Task("assignment 2", 29);
+        var task3 = new Task("assignment 3", 28);
+        var task4 = new Task("assignment 4", 28);
+        var task5 = new Task("assignment 5", 28);
+        var task6 = new Task("Midterm", 45);
+        var task7 = new Task("Final", 48);
+        
+        student1.addAssignment(task1);
+        student1.addAssignment(task2);
+        student1.addAssignment(task3);
+        student1.addAssignment(task4);
+        student1.addAssignment(task5);
+        student1.addExam(task6);
+        student1.addExam(task7);
+        student1.calcGrade();
+        
+        alert(student1.toString());
+        
+        //assign tasks to instance 2
+        var task1 = new Task("assignment 1", 20);
+        var task2 = new Task("assignment 2", 20);
+        var task3 = new Task("assignment 3", 20);
+        var task4 = new Task("assignment 4", 20);
+        var task5 = new Task("assignment 5", 20);
+        var task6 = new Task("Midterm", 40);
+        var task7 = new Task("Final", 30);
+        
+        student2.addAssignment(task1);
+        student2.addAssignment(task2);
+        student2.addAssignment(task3);
+        student2.addAssignment(task4);
+        student2.addAssignment(task5);
+        student2.addExam(task6);
+        student2.addExam(task7);
+        student2.calcGrade();
+
+        alert(student2.toString());
+
+        }
+    
+    function createCharTriangle(){
+
+        var output = "";
+        var numofrows = 21;
+        var middlecol = Math.round(numofrows/2);
+
+        for(i=0; i<numofrows; i++){
+           if(i%2==0){
+              for(j=0; j<=numofrows; j++){
+                 if(j > middlecol-i/2-1 && j < middlecol+i/2+1)
+                    output +="*";
+                 else 
+                    output +=" ";
+              }
+           }
+           else {
+              for(j=0; j<=numofrows; j++){
+                 if(j > middlecol-(i-1)/2-1 && j < middlecol+(i-1)/2+1 )
+                    output +="o";
+                 else 
+                    output +=" ";
+              }
+           }
+           output += "\n";
+        }
+        return output;
+    }     
+
+    function displayCharTriangle(){
+        
+        alert(createCharTriangle());
+    }
+    
+    function convertCharTriangle() {
+    	
+    	var charTriangle_string = createCharTriangle().replace(/ /g, "&nbsp;").replace(/\n/g,"<br>");
+        return charTriangle_string;
+    }
+    
+    </script>
+    
+    <ul>
+    <li><a href="assign1_doc.htm">Documentation</a></li>
+    <li><a href="javascript:createStudent()">createStudent()</a></li>
+    <li><a href="javascript:displayCharTriangle()">createCharTriangle()</a></li>
+    </ul>
+    
+    <input type='button' onclick="document.getElementById('content').innerHTML=convertCharTriangle()" value='Display charTriangle in HTML'  />
+    <p id="content" style="font-family: Courier New, monospace"></p>
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mystocks>
+   <stock id="1">
+      <summary symbol="GOOG" last_trade="452.67" trade_time="12:09PM EDT" previous_close="450.20" volume="1,217,272" day_range="450.62-457.33"/>
+      <company_headlines>
+         <company_headline date="29-Jun-10" headline="Nokia Asks Russian Police to Get Prototype From Blogger"/>
+         <company_headline date="29-Jun-10" headline="Stock Picks: Berkshire Hathaway, Google, WD-40"/>
+         <company_headline date="29-Jun-10" headline="Google Streams Over Apple's Wall"/>
+         <company_headline date="28-Jun-10" headline="Your First Trade of the New Earnings Season"/>
+         <company_headline date="28-Jun-10" headline="Facebook Makes Headway Around the World"/>
+         <company_headline date="28-Jun-10" headline="'Fast Money' Portfolios of the Week"/>
+      </company_headlines>
+      <company_events>
+         <company_event date="29-Jun-10" event="Price hit new 52-week low ($451.12)"/>
+         <company_event date="21-May-10" event="Google upgraded by MKM Partners"/>
+         <company_event date="17-May-10" event="GOOGLE INC. Files SEC form 8-K, Change in Directors or Principal Officers, Submission of Matters to a Vote of Security"/>
+         <company_event date="5-May-10" event="GOOGLE INC. Files SEC form 10-Q, Quarterly Report"/>
+         <company_event date="15-Apr-10" event="GOOGLE INC. Files SEC form 8-K, Results of Operations and Financial Condition, Other Events, Financial Statements and"/>
+         <company_event date="5-Mar-10" event="GOOGLE INC. Files SEC form 8-K, Change in Directors or Principal Officers"/>
+      </company_events>
+      <profile company_name="Google Inc." address="1600 Amphitheatre Parkway, Mountain View, CA 94043 United States" phone="650-253-0000" fax="650-253-0001" website="http://www.google.com" sector="Technology"/>
+      <key_statistics market_cap="144.37B" profit_margin="28.30%" revenue="24.92B" total_cash="26.51B" total_debt="0.00" shares_outstanding="318.49M"/>
+   </stock>
+   <stock id="2">
+      <summary symbol="JDSU" last_trade="9.98" trade_time="1:09PM EDT" previous_close="9.97" volume="2,322,295" day_range="9.86-10.19"/>
+      <company_headlines>
+         <company_headline date="29-Jun-10" headline="[video] They Just Don't Get Cisco!"/>
+         <company_headline date="29-Jun-10" headline="U.S. Stocks Rally, Still Trading Low In High Volume"/>
+         <company_headline date="29-Jun-10" headline="Greenberg: Defying the Tech Trounce"/>
+         <company_headline date="28-Jun-10" headline="JDSU Provides 'Uncompromising Visibility' at Global LTE Interoperability Event"/>
+         <company_headline date="28-Jun-10" headline="HP, Avaya in 3-year product deal"/>
+         <company_headline date="28-Jun-10" headline="JDS UNIPHASE CORP /CA/ Files SEC form 8-K, Change in Directors or Principal Officers"/>
+      </company_headlines>
+      <company_events>
+         <company_event date="28-Jun-10" event="JDS UNIPHASE CORP /CA/ Files SEC form 8-K, Change in Directors or Principal Officers"/>
+         <company_event date="7-May-10" event="JDS UNIPHASE CORP /CA/ Files SEC form 10-Q, Quarterly Report"/>
+         <company_event date="6-May-10" event="JDS UNIPHASE CORP /CA/ Files SEC form 8-K, Other Events, Financial Statements and Exhibits"/>
+         <company_event date="5-May-10" event="JDSU Earnings Call scheduled for 5:00 pm ET today"/>
+         <company_event date="5-May-10" event="JDS UNIPHASE CORP /CA/ Files SEC form 8-K, Results of Operations and Financial Condition, Financial Statements and Ex"/>
+         <company_event date="15-Apr-10" event="Price hit new 52-week high ($13.95)"/>
+      </company_events>
+      <profile company_name="JDS Uniphase Corp." address="430 North McCarthy Boulevard Milpitas, CA 95035 United States" phone="408-546-5000" fax="408-546-4300" website="http://www.jdsu.com" sector="Technology"/>
+      <key_statistics market_cap="2.19B" profit_margin="-6.67%" total_cash="679.10M" total_debt="298.50M" shares_outstanding="220.21M"/>
+   </stock>
+   <stock id="3">
+      <summary symbol="WFC" last_trade="26.51" trade_time="1:17PM EDT" previous_close="26.66" volume="17,999,431" day_range="26.27-27.06"/>
+      <company_headlines>
+         <company_headline date="29-Jun-10" headline="Wells Swings The Meat Axe, Closes Branches"/>
+         <company_headline date="29-Jun-10" headline="Ballantyne Strong nets $20 M revolving credit deal"/>
+         <company_headline date="29-Jun-10" headline="Wells Fargo: Financial Winners and Losers"/>
+         <company_headline date="28-Jun-10" headline="Initial claims drop last week but remain high"/>
+         <company_headline date="28-Jun-10" headline="RPT-PREVIEW-Credit outlook a focus when big banks post results"/>
+         <company_headline date="28-Jun-10" headline="In Pictures: Cashed-In TARP Tickets"/>
+      </company_headlines>
+      <company_events>
+         <company_event date="7-Jul-10" event="WELLS FARGO &amp; COM Files SEC form 8-K, Other Events, Financial Statements and Exhibits" />
+         <company_event date="2-Jul-10" event="WELLS FARGO &amp; COM Files SEC form 8-K, Change in Directors or Principal Officers" />
+         <company_event date="28-Jun-10" event="WELLS FARGO &amp; COM Files SEC form 8-K, Financial Statements and Exhibits" />
+         <company_event date="25-Jun-10" event="WELLS FARGO &amp; COM Files SEC form 8-K, Change in Directors or Principal Officers, Financial Statements and Exhibits" />
+         <company_event date="18-Jun-10" event="WELLS FARGO &amp; COM Files SEC form 8-K, Financial Statements and Exhibits" />
+         <company_event date="17-Jun-10" event="WELLS FARGO &amp; COM Files SEC form 8-K, Financial Statements and Exhibits" />
+      </company_events>
+      <profile company_name="Wells Fargo &amp; Company" address="420 Montgomery Street San Francisco, CA 94104 United States" phone="866-249-3302" fax="NA" website="http://www.wellsfargo.com" sector="Financial" />
+      <key_statistics market_cap="138.22B" profit_margin="17.74%" revenue="66.39B" total_cash="115.84B" total_debt="246.21B" shares_outstanding="5.21B"/>
+   </stock>
+   <stock id="4">
+      <summary symbol="XOM" last_trade="58.49" trade_time="1:33PM EDT" previous_close="58.43" volume="23,162,402" day_range="58.15-59.15"/>
+      <company_headlines>
+         <company_headline date="29-Jun-10" headline="Most active New York Stock Exchange-traded stocks"/>
+         <company_headline date="29-Jun-10" headline="UPDATE - Exxon sees greater scrutiny after spill"/>
+         <company_headline date="29-Jun-10" headline="Exxon Mobil, Life Technologies: Money Flow Leaders (XOM, LIFE)"/>
+         <company_headline date="28-Jun-10" headline="Oil Tops $75, but Inventory a Mixed Bag"/>
+         <company_headline date="28-Jun-10" headline="Gazprom most profitable firm on Fortune Global 500"/>
+         <company_headline date="28-Jun-10" headline="[$$] Kazakhstan Probes Illegal Oil Production"/>
+      </company_headlines>
+      <company_events>
+         <company_event date="1-Jul-10" event="Price hit new 52-week low ($56.17)"/>
+         <company_event date="29-Jun-10" event="Price hit new 52-week low ($57.00)"/>
+         <company_event date="25-Jun-10" event="EXXON MOBIL CORP Files SEC form 8-K, Completion of Acquisition or Disposition of Assets, Other Events, Financial Stat"/>
+         <company_event date="1-Jun-10" event="EXXON MOBIL CORP Files SEC form 8-K, Submission of Matters to a Vote of Security Holders"/>
+         <company_event date="25-May-10" event="GLOBAL PARTNERS LP Conference Call to Discuss Sign of Agreement with ExxonMobil to Purchase and Supply 190 Mobil Branded Gas Stations in New England scheduled for 10:00 am ET today"/>
+         <company_event date="11-May-10" event="Ex-Date for dividend payment of $0.44"/>
+      </company_events>
+      <profile company_name="Exxon Mobil Corp." address="5959 Las Colinas Boulevard Irving, TX 75039-2298 United States" phone="972-444-1000" fax="972-444-1348" website="http://www.exxonmobil.com" sector="Basic Materials"/>
+      <key_statistics market_cap="274.37B" profit_margin="6.98%" revenue="301.27B" total_cash="13.83B" total_debt="9.45B" shares_outstanding="4.70B"/>
+   </stock>
+   <stock id="5">
+      <summary symbol="MMM" last_trade="80.59" trade_time="1:48PM EDT" previous_close="80.52" volume="2,033,294" day_range="80.42-81.59"/>
+      <company_headlines>
+         <company_headline date="29-Jun-10" headline="The Buzz: Europe debt fears are fading. But is worst over?"/>
+         <company_headline date="29-Jun-10" headline="Long-Only Large Cap Value Investing - Harry Rady - Rady Asset Management"/>
+         <company_headline date="29-Jun-10" headline="The Smarter Way to Start Investing"/>
+         <company_headline date="28-Jun-10" headline="3M Announces Educational Offerings at APIC Annual Congress"/>
+         <company_headline date="28-Jun-10" headline="[video] Buy Under-valued Dividend Payers"/>
+         <company_headline date="28-Jun-10" headline="3M buys U.K. protective clothing supplier Dailys"/>
+      </company_headlines>
+      <company_events>
+         <company_event date="28-Jun-10" event="3M CO Files SEC form 8-K, Results of Operations and Financial Condition, Regulation FD Disclosure, Financial Statemen"/>
+         <company_event date="19-May-10" event="Ex-Date for dividend payment of $0.525"/>
+         <company_event date="17-May-10" event="3M CO Files SEC form 8-K, Other Events, Financial Statements and Exhibits"/>
+         <company_event date="12-May-10" event="3M CO Files SEC form 8-K, Change in Directors or Principal Officers, Submission of Matters to a Vote of Security Hold"/>
+         <company_event date="6-May-10" event="Price hit new 52-week high ($90.52)"/>
+         <company_event date="5-May-10" event="3M CO Files SEC form 10-Q, Quarterly Report"/>
+      </company_events>
+      <profile company_name="3M Co." address="3-M Center St Paul, MN 55144-1000 United States" phone="651-733-1110" fax="651-737-3061" website="http://www.3m.com" sector="Conglomerates"/>
+      <key_statistics market_cap="57.33B" profit_margin="14.79%" revenue="24.38B" total_cash="4.61B" total_debt="5.78B" shares_outstanding="713.07M"/>
+   </stock>
+</mystocks>

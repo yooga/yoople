@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<h2 style="background-color: #66FF66">Yongxin Luo, COIN70B, Assignment 5</h2>   
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Yoople_COIN70B_Assignment 5</title>
+<script type="text/javascript" src="js/xhr.js"></script>
+<script type="text/javascript" src="js/xmlparser.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript">
+function search() {
+	
+   var  the_word = document.getElementById('textarea').value;
+
+   //twitter
+   xhr = createXHR();  
+   xhr.onreadystatechange = function(event){
+       if (xhr.readyState == 4){
+           if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+               displayResponseXML(xhr.responseXML);
+           } 
+           else {
+               alert("Request was unsuccessful: " + xhr.status);
+           }
+       }
+   }
+   var url = "xmlproxy.php?u=http://search.twitter.com/search.rss?q=" + escape(the_word);	
+   send(xhr,url);
+
+   //google
+   xhrr = createXHR();        
+   xhrr.onreadystatechange = function(event){
+       if (xhrr.readyState == 4){
+           if ((xhrr.status >= 200 && xhrr.status < 300) || xhrr.status == 304){
+                displayResponseText(xhrr.responseText);
+           } 
+           else {
+               alert("Request was unsuccessful: " + xhrr.status);
+           }
+       }
+   }
+   var url = "urlproxy.php?u=" + escape("http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=") + escape(the_word);
+   send(xhrr,url);
+}
+
+function displayResponseXML(the_response){
+    var xmldom = the_response;
+    var outstring ="";
+    var items = xmldom.getElementsByTagName('item');
+    for(var i=0;i<xmldom.getElementsByTagName('item').length;i++){
+      outstring += "Title: " + xmldom.getElementsByTagName('title')[i].firstChild.nodeValue + "<br>";
+      outstring += "Description: " + xmldom.getElementsByTagName('description')[i].firstChild.nodeValue + "<br>";
+      outstring += "PubDate: " + xmldom.getElementsByTagName('pubDate')[i].firstChild.nodeValue + "<br>";
+      outstring += "Author: " + xmldom.getElementsByTagName('author')[i].firstChild.nodeValue + "<br></br>";
+    }
+    document.getElementById('twitter').innerHTML = outstring;
+}
+
+function displayResponseText(the_response){
+    var results = JSON.parse(the_response);
+    var outstring ="";
+    for(var i=0; i<results.responseData.results.length; i++){
+        outstring += "Title: " + results.responseData.results[i].title + "<br>";
+        outstring += "Content: " + results.responseData.results[i].content + "<br>";
+        outstring += "URL: " + results.responseData.results[i].unescapedUrl + "<br></br>";
+    }
+    document.getElementById('google').innerHTML = outstring;
+    
+}
+
+function send(xhr, url){
+	xhr.open("get",url, true);
+	xhr.send(null);
+}
+
+</script>
+</head>
+<body>
+<h3>Part I</h3>
+<textarea id='textarea' rows="1", cols="40">Los Altos, California</textarea><input id="searchbt1" type='button' value='Search' onclick="javascript:search()" /><br></br>
+<div id='twitter' style="background-color:#CFFFCD;height:900px;width:970px;padding:10px"></div><br>
+<div id='google' style="background-color:#FFFFCD;height:600px;width:970px;padding:10px"></div><br>
+<h3>Part II</h3>
+<li><P>
+<b>Improve your Student reference type constructor by making it scope-safe. Why?</b> Answer: When the Student constuctor is used with the new operator, a new
+Student object is created, and the properties are assgined onto it. However, when the constructor
+is called without the new operator, since the this object is bound at runtime, calling Student()
+directly maps this to the global object, resulting in accidental augmentation of the wrong object.
+With the scope-safe contructor, it first check to ensure that the this object is an instance of the
+correct type before applying any changes. If not, a new operator instance is created and returned.
+ </P></li>
+ <li><p><b>Use lazy-loading technique on the createXHR() function. Why?</b>Answer: Lazy loading means that the branching of function execution happens only one;
+ the first time the function is called. During the first call, the function is overwritten with anothe function that executes in the appropriate
+ way such that any future calls to the function needn't go through the execution branch. Without the lazy loading, Coding goes through every branch
+ and could run much slower than that using the lazy loading.</p></li>
+</body>

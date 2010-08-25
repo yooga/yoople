@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<simple>
+	<contact>
+		<first_name>Yongxin</first_name>
+		<last_name>Luo</last_name>
+		<nick_name>Andy</nick_name>
+		<email_address>yongxin91@yahoo.com</email_address>
+	</contact>
+	<general>
+		<occupation>Manufacturing Engineer</occupation>
+		<education>Master of Science</education>
+		<goals>My goal is to gain more knowledge of XML so that I can be well-rounded Java WeB Developer.</goals>
+	</general>
+	<comments>
+		<comment>I really like your well-organized website. I am sure that I will learn a lot from this course.</comment>
+	</comments>
+</simple>
+
+

@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<h2 style="background-color: #66FF66">
+Yongxin Luo, COIN70B, Assignment 3
+</h2>   
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Yoople_COIN70B_Assignment 3</title>
+<script type="text/javascript", src="js/Student.js"></script>
+<script type="text/javaScript">
+
+Student.prototype.addcomment = function(comment){
+   this.comment = comment;
+}
+
+
+function validatefirstname(){
+   var firstname=document.getElementById('firstname');
+   if(firstname.value==""){
+	  alert("Please fill in your first name.")
+	  firstname.style.background = 'yellow';
+      return false;
+   }else{
+	  firstname.style.background = '';
+	  return true;
+   }
+}
+
+function validatelastname(){
+	   var lastname=document.getElementById('lastname');
+	   if(lastname.value==""){
+		  alert("Please fill in your last name.");
+		  lastname.style.background = 'yellow';
+	      return false;
+	   }else{
+		  lastname.style.background = '';
+		  return true;
+	   }
+}
+
+function validateemail(){
+	   var emailaddress=document.getElementById('emailaddress');
+	   var pattern_email = /^(\w+\.)*\w+@(\w+\.)+[A-Za-z]+$/;
+	   if(!pattern_email.test(emailaddress.value)){
+		  alert("Please fill in your email address.");
+		  emailaddress.style.background = 'yellow';
+	      return false;
+	   }else{
+		  emailaddress.style.background = '';
+		  return true;
+	   }
+}
+
+function validateassignment1(){
+	   var assignment1=document.getElementById('assignment1');
+	   var pattern = /^\d+$/;
+	   if(parseFloat(assignment1.value)<0 || parseFloat(assignment1.value)>30 || !pattern.test(assignment1.value)){
+          alert("Please enter a value between 0 and 30.");
+          assignment1.style.background = 'yellow';
+	      return false;
+	   }else{
+		  assignment1.style.background = '';
+		  return true;
+	   }
+}
+
+function validateassignment2(){
+	   var assignment2=document.getElementById('assignment2');
+	   var pattern = /^\d+$/;
+	   if(parseFloat(assignment2.value)<0 || parseFloat(assignment2.value)>30 || !pattern.test(assignment2.value)){
+		  alert("Please enter a value between 0 and 30.");
+		  assignment2.style.background = 'yellow';
+	      return false;
+	   }else{
+		  assignment2.style.background = '';
+		  return true;
+	   }
+}
+
+function validateassignment3(){
+	   var assignment3=document.getElementById('assignment3');
+	   var pattern = /^\d+$/;
+	   if(parseFloat(assignment3.value)<0 || parseFloat(assignment3.value)>30 || !pattern.test(assignment3.value)){
+		  alert("Please enter a value between 0 and 30.");
+		  assignment3.style.background = 'yellow';
+	      return false;
+	   }else{
+		  assignment3.style.background = '';
+		  return true;
+	   }
+}
+
+function validateassignment4(){
+	   var assignment4=document.getElementById('assignment4');
+	   var pattern = /^\d+$/;
+	   if(parseFloat(assignment4.value)<0 || parseFloat(assignment4.value)>30 || !pattern.test(assignment4.value)){
+		  alert("Please enter a value between 0 and 30.");
+		  assignment4.style.background = 'yellow';
+	      return false;
+	   }else{
+		  assignment4.style.background = '';
+		  return true;
+	   }
+}
+
+function validateassignment5(){
+	   var assignment5=document.getElementById('assignment5');
+	   var pattern = /^\d+$/;
+	   if(parseFloat(assignment5.value)<0 || parseFloat(assignment5.value)>30 || !pattern.test(assignment5.value)){
+		  alert("Please enter a value between 0 and 30.");
+		  assignment5.style.background = 'yellow';
+	      return false;
+	   }else{
+		  assignment5.style.background = '';
+		  return true;
+	   }
+}
+
+function validatemidterm(){
+	   var midterm=document.getElementById('midterm');
+	   var pattern = /^\d+$/;
+	   if(parseFloat(midterm.value)<0 || parseFloat(midterm.value)>50 || !pattern.test(midterm.value)){
+		  alert("Please enter a value between 0 and 50.");
+		  midterm.style.background = 'yellow';
+	      return false;
+	   }else{
+		  midterm.style.background = '';
+		  return true;
+	   }
+}
+
+function validatefinalterm(){
+	   var finalterm=document.getElementById('finalterm');
+	   var pattern = /^\d+$/;
+	   if(parseFloat(finalterm.value)<0 || parseFloat(finalterm.value)>50 || !pattern.test(finalterm.value)){
+		  alert("Please enter a value between 0 and 50.");
+		  finalterm.style.background = 'yellow';
+	      return false;
+	   }else{
+		  finalterm.style.background = '';
+		  return true;
+	   }
+}
+
+function submitAndClear(){
+
+	  var form = document.getElementById('studentForm');
+      var student = new Student(form.firstname.value,form.lastname.value,form.emailaddress.value);
+
+      if((form.firstname.value=="")||(form.lastname.value=="")||(form.emailaddress.value=="")||
+    	 (form.assignment1.value=="")||(form.assignment2.value=="")||(form.assignment3.value=="")||
+    	 (form.assignment4.value=="")||(form.assignment5.value=="")||(form.midterm.value=="")||
+    	 (form.finalterm.value==""))
+      {
+    	  alert("All Fields Are Required.");
+          return false;
+      }
+      else
+      {
+	     student.addAssignment(new Task("assignment 1", parseFloat(form.assignment1.value)));
+	     student.addAssignment(new Task("assignment 2", parseFloat(form.assignment2.value)));
+	     student.addAssignment(new Task("assignment 3", parseFloat(form.assignment3.value)));
+	     student.addAssignment(new Task("assignment 4", parseFloat(form.assignment4.value)));
+	     student.addAssignment(new Task("assignment 5", parseFloat(form.assignment5.value)));
+	     student.addExam(new Task("Midterm", parseFloat(form.midterm.value)));
+	     student.addExam(new Task("Final", parseFloat(form.finalterm.value)));
+         student.addcomment(form.textarea.value);
+		 student.calcGrade();
+
+	     var popupWindow = window.open('','topwindow','height=400,width=400,resizable=yes,scrollbars=yes');
+         var x = popupWindow.document.createElement('div');
+         x.innerHTML = student.toHTML() + "<br>" + "Comment: " + student.comment;
+         popupWindow.document.body.appendChild(x);
+         popupWindow.focus();
+        
+	     return false;
+	  }
+}
+
+var EventUtil = {
+
+   addHandler: function(element, type, handler){
+      if (element.addEventListener){
+         element.addEventListener(type, handler, false);
+      } else if (element.attachEvent){
+	     element.attachEvent("on" + type, handler);
+      } else {
+	     element["on" + type] = handler;
+      }
+   },
+	    
+   getButton: function(event){
+	  if (document.implementation.hasFeature("MouseEvents", "2.0")){
+	     return event.button;
+	  } else {
+	     switch(event.button){
+	        case 0:
+	        case 1:
+            case 3:
+            case 5:
+	        case 7:
+               return 0;
+	        case 2:
+	        case 6:
+	           return 2;
+	        case 4: return 1;
+	     }
+	  }
+   },
+	    
+   getCharCode: function(event){
+      if (typeof event.charCode == "number"){
+	      return event.charCode;
+	  } else {
+	      return event.keyCode;
+	  }
+   },
+	    
+   getClipboardText: function(event){
+      var clipboardData =  (event.clipboardData || window.clipboardData);
+	  return clipboardData.getData("text");
+   },
+	    
+   getEvent: function(event){
+	   return event ? event : window.event;
+   },
+	    
+   getRelatedTarget: function(event){
+	   if (event.relatedTarget){
+	      return event.relatedTarget;
+	   } else if (event.toElement){
+	      return event.toElement;
+	   } else if (event.fromElement){
+	      return event.fromElement;
+	   } else {
+	      return null;
+	   }
+	    
+	},
+	    
+	getTarget: function(event){
+	   return event.target || event.srcElement;
+	},
+	    
+	getWheelDelta: function(event){
+	   if (event.wheelDelta){
+	      return (client.engine.opera && client.engine.opera < 9.5 ? -event.wheelDelta : event.wheelDelta);
+	   } else {
+	      return -event.detail * 40;
+       }
+	},
+	    
+    preventDefault: function(event){
+	   if (event.preventDefault){
+	      event.preventDefault();
+	   } else {
+          event.returnValue = false;
+	   }
+	},
+
+	removeHandler: function(element, type, handler){
+	   if (element.removeEventListener){
+	      element.removeEventListener(type, handler, false);
+	   } else if (element.detachEvent){
+	      element.detachEvent("on" + type, handler);
+       } else {
+          element["on" + type] = null;
+       }
+	},
+	    
+	setClipboardText: function(event, value){
+	   if (event.clipboardData){
+	      event.clipboardData.setData("text/plain", value);
+	   } else if (window.clipboardData){
+	      window.clipboardData.setData("text", value);
+	   }
+	},
+	    
+	stopPropagation: function(event){
+	    if (event.stopPropagation){
+	       event.stopPropagation();
+	    } else {
+	       event.cancelBubble = true;
+	    }
+	}
+};
+</script>
+</head>
+<body>
+
+<form id="studentForm" onsubmit="submitAndClear()">
+<table cellpadding="5" border="0">
+    <tr>
+        <td align="right"><p>First name:</td>
+        <td><input type="text" id="firstname" onblur="validatefirstname()">
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><p>Last name:</td>
+        <td><input type="text" id="lastname" onblur="validatelastname()">
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><p>Email address:</td>
+        <td><input type="text" id="emailaddress" onblur="validateemail()">
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><p>Assignment 1:</td>
+        <td><input type="text" id="assignment1" onblur="validateassignment1()">
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><p>Assignment 2:</td>
+        <td><input type="text" id="assignment2" onblur="validateassignment2()">
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><p>Assignment 3:</td>
+        <td><input type="text" id="assignment3" onblur="validateassignment3()">
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><p>Assignment 4:</td>
+        <td><input type="text" id="assignment4" onblur="validateassignment4()">
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><p>Assignment 5:</td>
+        <td><input type="text" id="assignment5" onblur="validateassignment5()">
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><p>Midterm:</td>
+        <td><input type="text" id="midterm" onblur="validatemidterm()">
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><p>Final:</td>
+        <td><input type="text" id="finalterm" onblur="validatefinalterm()">
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><p>Comment:</td>
+        <td><textarea id="textarea" rows="10" cols="20" id="textarea">COIN70B Student Data Entry Form</textarea>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" value="Submit"></td>
+    </tr>
+</table>
+</form>
+
+<div id="myDiv" style="background-color:#CCCCCC;height:50px;width:270px;padding:10px"></div><br>
+<script type="text/javascript">
+
+var div = document.getElementById("myDiv");
+EventUtil.addHandler(div, "mouseover", function(event){
+   event = EventUtil.getEvent(event);
+   div.innerHTML="Coordinates: " + event.clientX + "," + event.clientY;        
+   });
+</script>
+
+<script type="text/javascript">
+EventUtil.addHandler(window, "load", function(){
+   var image = document.createElement("img");
+   EventUtil.addHandler(image, "load", function(event){
+      event = EventUtil.getEvent(event);
+   });
+   document.body.appendChild(image);
+   image.src = "images/smileyt.gif";            
+});
+</script>
+
+<textarea id="kbarea" style="width:100px;height:50px;padding:10px"></textarea>
+<script type="text/javascript">
+   var textbox = document.getElementById('kbarea');
+   EventUtil.addHandler(textbox, "keyup", function(event){
+   event = EventUtil.getEvent(event);    
+   textbox.value = String.fromCharCode(event.keyCode) + " " + event.keyCode;
+   });
+</script>
+</body>
+</html>

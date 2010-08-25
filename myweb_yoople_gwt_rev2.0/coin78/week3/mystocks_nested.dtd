@@ -1,0 +1,33 @@
+<!ELEMENT mystocks (stock+)>
+<!ELEMENT stock (summary, company_headlines, company_events, profile, key_statistics)>
+<!ATTLIST stock
+          id CDATA #REQUIRED>
+<!ELEMENT summary (symbol, last_trade, trade_time, previous_close, volume, day_range)>
+<!ELEMENT symbol (#PCDATA)>
+<!ELEMENT last_trade (#PCDATA)>
+<!ELEMENT trade_time (#PCDATA)>
+<!ELEMENT previous_close (#PCDATA)>
+<!ELEMENT volume (#PCDATA)>
+<!ELEMENT day_range (#PCDATA)>
+<!ELEMENT company_headlines (company_headline+)>
+<!ELEMENT company_headline (date, headline)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT headline (#PCDATA)>
+<!ELEMENT company_events (company_event+)>
+<!ELEMENT company_event (date, event)>
+<!ELEMENT event (#PCDATA)>
+<!ELEMENT profile (company_name, address, phone, fax, website, sector)>
+<!ELEMENT company_name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT fax (#PCDATA)>
+<!ELEMENT website (#PCDATA)>
+<!ELEMENT sector (#PCDATA)>
+<!ELEMENT key_statistics (market_cap, profit_margin, revenue, total_cash, total_debt, shares_outstanding)>
+<!ELEMENT market_cap (#PCDATA)>
+<!ELEMENT profit_margin (#PCDATA)>
+<!ELEMENT revenue (#PCDATA)>
+<!ELEMENT total_cash (#PCDATA)>
+<!ELEMENT total_debt (#PCDATA)>
+<!ELEMENT shares_outstanding (#PCDATA)>
+
